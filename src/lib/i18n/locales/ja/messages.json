@@ -647,6 +647,13 @@
     ],
     "translation": "メッセージを入力... （/でコマンド、@でファイル、Command+Enterで送信）"
   },
+  "chat.placeholder.continue.ctrl_enter": {
+    "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [],
+    "translation": "メッセージを入力... （/でコマンド、@でファイル、Ctrl+Enterで送信）"
+  },
   "chat.placeholder.continue.enter": {
     "message": "Type your message... (Start with / for commands, @ for files, Enter to send)",
     "placeholders": {},
@@ -2943,6 +2950,12 @@
       ]
     ],
     "translation": "Command+Enterで送信"
+  },
+  "settings.input.enter_key_behavior.ctrl_enter": {
+    "placeholders": {},
+    "comments": [],
+    "origin": [],
+    "translation": "Ctrl+Enterで送信"
   },
   "settings.input.enter_key_behavior.description": {
     "placeholders": {},

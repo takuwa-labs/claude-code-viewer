@@ -310,6 +310,15 @@ export const ChatInput: FC<ChatInputProps> = ({
         // Command+Enter: Send mode (Mac)
         e.preventDefault();
         handleSubmit();
+
+      } else if (
+        enterKeyBehavior === "ctrl-enter-send" &&
+        e.ctrlKey &&
+        !e.shiftKey
+      ) {
+        // Ctrl+Enter: Send mode
+        e.preventDefault();
+        handleSubmit();
       }
     }
   };

@@ -647,6 +647,13 @@
     ],
     "translation": "Type your message... (Start with / for commands, @ for files, Command+Enter to send)"
   },
+  "chat.placeholder.continue.ctrl_enter": {
+    "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [],
+    "translation": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)"
+  },
   "chat.placeholder.continue.enter": {
     "message": "Type your message... (Start with / for commands, @ for files, Enter to send)",
     "placeholders": {},
@@ -2943,6 +2950,12 @@
       ]
     ],
     "translation": "Send with Command+Enter"
+  },
+  "settings.input.enter_key_behavior.ctrl_enter": {
+    "placeholders": {},
+    "comments": [],
+    "origin": [],
+    "translation": "Send with Ctrl+Enter"
   },
   "settings.input.enter_key_behavior.description": {
     "placeholders": {},

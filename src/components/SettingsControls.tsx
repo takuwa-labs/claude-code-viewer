@@ -95,7 +95,8 @@ export const SettingsControls: FC<SettingsControlsProps> = ({
       enterKeyBehavior: value as
         | "shift-enter-send"
         | "enter-send"
-        | "command-enter-send",
+        | "command-enter-send"
+        | "ctrl-enter-send",
     };
     updateConfig(newConfig);
   };
@@ -229,6 +230,9 @@ export const SettingsControls: FC<SettingsControlsProps> = ({
             </SelectItem>
             <SelectItem value="command-enter-send">
               <Trans id="settings.input.enter_key_behavior.command_enter" />
+            </SelectItem>
+            <SelectItem value="ctrl-enter-send">
+              <Trans id="settings.input.enter_key_behavior.ctrl_enter" />
             </SelectItem>
           </SelectContent>
         </Select>
