@@ -32,6 +32,13 @@ export const StartNewChat: FC<{ projectId: string }> = ({ projectId }) => {
           "Type your message... (Start with / for commands, @ for files, Command+Enter to send)",
       });
     }
+    if (behavior === "ctrl-enter-send") {
+      return i18n._({
+        id: "chat.placeholder.continue.ctrl_enter",
+        message:
+          "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
+      });
+    }
     return i18n._({
       id: "chat.placeholder.continue.shift_enter",
       message:

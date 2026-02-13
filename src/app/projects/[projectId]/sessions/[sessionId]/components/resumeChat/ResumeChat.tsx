@@ -38,6 +38,13 @@ export const ResumeChat: FC<{
           "Type your message... (Start with / for commands, @ for files, Command+Enter to send)",
       });
     }
+    if (behavior === "ctrl-enter-send") {
+      return i18n._({
+        id: "chat.placeholder.resume.ctrl_enter",
+        message:
+          "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
+      });
+    }
     return i18n._({
       id: "chat.placeholder.resume.shift_enter",
       message:

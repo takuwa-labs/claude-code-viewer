@@ -647,6 +647,22 @@
     ],
     "translation": "メッセージを入力... （/でコマンド、@でファイル、Command+Enterで送信）"
   },
+  "chat.placeholder.continue.ctrl_enter": {
+    "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
+        43
+      ],
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
+        35
+      ]
+    ],
+    "translation": "メッセージを入力... （/でコマンド、@でファイル、Ctrl+Enterで送信）"
+  },
   "chat.placeholder.continue.enter": {
     "message": "Type your message... (Start with / for commands, @ for files, Enter to send)",
     "placeholders": {},
@@ -690,6 +706,18 @@
       ]
     ],
     "translation": "メッセージを入力... （/でコマンド、@でファイル、Command+Enterで送信）"
+  },
+  "chat.placeholder.resume.ctrl_enter": {
+    "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ResumeChat.tsx",
+        41
+      ]
+    ],
+    "translation": "メッセージを入力... （/でコマンド、@でファイル、Ctrl+Enterで送信）"
   },
   "chat.placeholder.resume.enter": {
     "message": "Type your message... (Start with / for commands, @ for files, Enter to send)",
@@ -2943,6 +2971,17 @@
       ]
     ],
     "translation": "Command+Enterで送信"
+  },
+  "settings.input.enter_key_behavior.ctrl_enter": {
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/components/SettingsControls.tsx",
+        233
+      ]
+    ],
+    "translation": "Ctrl+Enterで送信"
   },
   "settings.input.enter_key_behavior.description": {
     "placeholders": {},
