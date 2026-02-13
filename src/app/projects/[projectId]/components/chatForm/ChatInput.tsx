@@ -277,6 +277,80 @@ export const ChatInput: FC<ChatInputProps> = ({
     setAttachedFiles((prev) => prev.filter((f) => f.id !== id));
   };
 
+  const handleAutoList = (
+    e: React.KeyboardEvent<HTMLTextAreaElement>,
+  ): boolean => {
+    const textarea = e.currentTarget;
+    if (textarea.selectionStart !== textarea.selectionEnd) return false;
+
+    const cursor = textarea.selectionStart;
+    const value = textarea.value;
+
+    // Current line start
+    const lineStart = value.lastIndexOf("\n", cursor - 1) + 1;
+    const lineText = value.substring(lineStart, cursor);
+
+    // Check for list pattern
+    // - Item
+    // * Item
+    // 1. Item
+    const match = lineText.match(/^(\s*)([-*]|\d+\.)(\s+)(.*)$/);
+
+    if (!match) return false;
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [_, indent, marker, space, content] = match;
+
+    // If list item is empty, remove the list marker (exit list)
+    if (!content.trim()) {
+      e.preventDefault();
+      const newValue = value.substring(0, lineStart) + value.substring(cursor);
+      setMessage(newValue);
+
+      // Move cursor to line start
+      setTimeout(() => {
+        if (textareaRef.current) {
+          textareaRef.current.selectionStart = textareaRef.current.selectionEnd =
+            lineStart;
+        }
+      }, 0);
+      return true;
+    }
+
+    // Determine next marker
+    let nextMarker = marker;
+    if (/^\d+\.$/.test(marker)) {
+      const num = parseInt(marker, 10);
+      if (!Number.isNaN(num)) {
+        nextMarker = `${num + 1}.`;
+      }
+    }
+
+    e.preventDefault();
+    const insertion = `\n${indent}${nextMarker}${space}`;
+    const newValue =
+      value.substring(0, cursor) + insertion + value.substring(cursor);
+
+    setMessage(newValue);
+
+    // Update cursor position
+    const newCursorPos = cursor + insertion.length;
+    setTimeout(() => {
+      if (textareaRef.current) {
+        textareaRef.current.selectionStart = textareaRef.current.selectionEnd =
+          newCursorPos;
+        // Scroll adjustment
+        const scrollHeight = textareaRef.current.scrollHeight;
+        const clientHeight = textareaRef.current.clientHeight;
+        if (scrollHeight > clientHeight) {
+          textareaRef.current.scrollTop = scrollHeight;
+        }
+      }
+    }, 0);
+
+    return true;
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (fileCompletionRef.current?.handleKeyDown(e)) {
       return;
@@ -289,35 +363,43 @@ export const ChatInput: FC<ChatInputProps> = ({
     // IMEで変換中の場合は送信しない
     if (e.key === "Enter" && !e.nativeEvent.isComposing) {
       const enterKeyBehavior = config?.enterKeyBehavior;
+      let shouldSubmit = false;
 
       if (enterKeyBehavior === "enter-send" && !e.shiftKey && !e.metaKey) {
         // Enter: Send mode
-        e.preventDefault();
-        handleSubmit();
+        shouldSubmit = true;
       } else if (
         enterKeyBehavior === "shift-enter-send" &&
         e.shiftKey &&
         !e.metaKey
       ) {
         // Shift+Enter: Send mode (default)
-        e.preventDefault();
-        handleSubmit();
+        shouldSubmit = true;
       } else if (
         enterKeyBehavior === "command-enter-send" &&
         e.metaKey &&
         !e.shiftKey
       ) {
         // Command+Enter: Send mode (Mac)
-        e.preventDefault();
-        handleSubmit();
+        shouldSubmit = true;
       } else if (
         enterKeyBehavior === "ctrl-enter-send" &&
         e.ctrlKey &&
         !e.shiftKey
       ) {
         // Ctrl+Enter: Send mode
+        shouldSubmit = true;
+      }
+
+      if (shouldSubmit) {
         e.preventDefault();
         handleSubmit();
+      } else {
+        // If not submitting, try auto-list completion
+        if (handleAutoList(e)) {
+          // If handled by auto-list, prevent default behavior (newline)
+          // Default behavior is already prevented inside handleAutoList for successful cases
+        }
       }
     }
   };
