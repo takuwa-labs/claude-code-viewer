@@ -301,6 +301,15 @@ export const ChatInput: FC<ChatInputProps> = ({
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_, indent, marker, space, content] = match;
 
+    if (
+      indent === undefined ||
+      marker === undefined ||
+      space === undefined ||
+      content === undefined
+    ) {
+      return false;
+    }
+
     // If list item is empty, remove the list marker (exit list)
     if (!content.trim()) {
       e.preventDefault();
@@ -310,8 +319,8 @@ export const ChatInput: FC<ChatInputProps> = ({
       // Move cursor to line start
       setTimeout(() => {
         if (textareaRef.current) {
-          textareaRef.current.selectionStart = textareaRef.current.selectionEnd =
-            lineStart;
+          textareaRef.current.selectionStart =
+            textareaRef.current.selectionEnd = lineStart;
         }
       }, 0);
       return true;

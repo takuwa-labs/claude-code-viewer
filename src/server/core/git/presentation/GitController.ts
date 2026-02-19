@@ -5,6 +5,7 @@ import { ProjectRepository } from "../../project/infrastructure/ProjectRepositor
 import { getDiff } from "../functions/getDiff";
 import type { CommitErrorCode, PushErrorCode } from "../schema";
 import { GitService } from "../services/GitService";
+import type { GitComparisonResult, GitResult } from "../types";
 
 const LayerImpl = Effect.gen(function* () {
   const gitService = yield* GitService;
@@ -30,11 +31,39 @@ const LayerImpl = Effect.gen(function* () {
 
         const projectPath = project.meta.projectPath;
 
-        const result = yield* Effect.promise(() =>
-          getDiff(projectPath, fromRef, toRef),
+        const isGitRepo = yield* gitService.checkIsGitRepository(projectPath);
+        if (!isGitRepo) {
+          return {
+            response: {
+              success: true,
+              data: {
+                files: [],
+                diffs: [],
+              },
+            },
+            status: 200,
+          } as const satisfies ControllerResponse;
+        }
+
+        const result: GitResult<GitComparisonResult> = yield* Effect.promise(
+          () => getDiff(projectPath, fromRef, toRef),
         );
+
+        if (!result.success) {
+          return {
+            response: {
+              success: false,
+              error: result.error?.message ?? "Diff failed",
+            },
+            status: 400,
+          } as const satisfies ControllerResponse;
+        }
+
         return {
-          response: result,
+          response: {
+            success: true,
+            data: result.data,
+          },
           status: 200,
         } as const satisfies ControllerResponse;
       } catch (error) {
@@ -71,6 +100,19 @@ const LayerImpl = Effect.gen(function* () {
 
       const projectPath = project.meta.projectPath;
       console.log("[GitController.commitFiles] Project path:", projectPath);
+
+      const isGitRepo = yield* gitService.checkIsGitRepository(projectPath);
+      if (!isGitRepo) {
+        return {
+          response: {
+            success: false,
+            error: "Not a git repository",
+            errorCode: "NOT_A_REPOSITORY",
+            details: "This project is not a git repository",
+          },
+          status: 400,
+        } as const satisfies ControllerResponse;
+      }
 
       // Stage files
       console.log("[GitController.commitFiles] Staging files...");
@@ -158,6 +200,19 @@ const LayerImpl = Effect.gen(function* () {
 
       const projectPath = project.meta.projectPath;
       console.log("[GitController.pushCommits] Project path:", projectPath);
+
+      const isGitRepo = yield* gitService.checkIsGitRepository(projectPath);
+      if (!isGitRepo) {
+        return {
+          response: {
+            success: false,
+            error: "Not a git repository",
+            errorCode: "NOT_A_REPOSITORY",
+            details: "This project is not a git repository",
+          },
+          status: 400,
+        } as const satisfies ControllerResponse;
+      }
 
       // Push
       console.log("[GitController.pushCommits] Pushing...");
@@ -284,6 +339,22 @@ const LayerImpl = Effect.gen(function* () {
 
       const projectPath = project.meta.projectPath;
 
+      const isGitRepo = yield* gitService.checkIsGitRepository(projectPath);
+      if (!isGitRepo) {
+        return {
+          response: {
+            success: true,
+            data: {
+              baseBranch: null,
+              currentBranch: null,
+              head: null,
+              commits: [],
+            },
+          },
+          status: 200,
+        } as const satisfies ControllerResponse;
+      }
+
       // Get current branch
       const currentBranchResult = yield* Effect.either(
         gitService.getCurrentBranch(projectPath),
@@ -387,6 +458,20 @@ const LayerImpl = Effect.gen(function* () {
 
       const projectPath = project.meta.projectPath;
 
+      const isGitRepo = yield* gitService.checkIsGitRepository(projectPath);
+      if (!isGitRepo) {
+        return {
+          response: {
+            success: true,
+            data: {
+              branches: [],
+              currentBranch: null,
+            },
+          },
+          status: 200,
+        } as const satisfies ControllerResponse;
+      }
+
       const branchesResult = yield* Effect.either(
         gitService.getBranches(projectPath),
       );
@@ -432,6 +517,14 @@ const LayerImpl = Effect.gen(function* () {
       }
 
       const projectPath = project.meta.projectPath;
+
+      const isGitRepo = yield* gitService.checkIsGitRepository(projectPath);
+      if (!isGitRepo) {
+        return {
+          response: { success: false, error: "Not a git repository" },
+          status: 400,
+        } as const satisfies ControllerResponse;
+      }
 
       const checkoutResult = yield* Effect.either(
         gitService.checkout(projectPath, branchName),
