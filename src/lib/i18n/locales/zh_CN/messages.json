@@ -648,7 +648,6 @@
     "translation": "输入消息...(输入 / 使用命令,@ 使用文件,Command+Enter 发送)"
   },
   "chat.placeholder.continue.ctrl_enter": {
-    "translation": "输入消息...(输入 / 使用命令,@ 使用文件,Ctrl+Enter 发送)",
     "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
     "placeholders": {},
     "comments": [],
@@ -661,7 +660,8 @@
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
         36
       ]
-    ]
+    ],
+    "translation": "输入消息...(输入 / 使用命令,@ 使用文件,Ctrl+Enter 发送)"
   },
   "chat.placeholder.continue.enter": {
     "message": "Type your message... (Start with / for commands, @ for files, Enter to send)",
@@ -2961,7 +2961,6 @@
     "translation": "使用 Command+Enter 发送"
   },
   "settings.input.enter_key_behavior.ctrl_enter": {
-    "translation": "使用 Ctrl+Enter 发送",
     "placeholders": {},
     "comments": [],
     "origin": [
@@ -2969,7 +2968,8 @@
         "src/components/SettingsControls.tsx",
         235
       ]
-    ]
+    ],
+    "translation": "使用 Ctrl+Enter 发送"
   },
   "settings.input.enter_key_behavior.description": {
     "placeholders": {},
