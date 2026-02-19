@@ -56,6 +56,22 @@ const LayerImpl = Effect.gen(function* () {
       return result.right;
     });
 
+  /**
+   * Checks if the given directory is inside a git work tree.
+   */
+  const checkIsGitRepository = (cwd: string) =>
+    Effect.gen(function* () {
+      const result = yield* Effect.either(
+        execGitCommand(["rev-parse", "--is-inside-work-tree"], cwd),
+      );
+
+      if (Either.isLeft(result)) {
+        return false;
+      }
+
+      return result.right.trim() === "true";
+    });
+
   const getBranches = (cwd: string) =>
     Effect.gen(function* () {
       const result = yield* execGitCommand(["branch", "-vv", "--all"], cwd);
@@ -409,6 +425,7 @@ const LayerImpl = Effect.gen(function* () {
     findBaseBranch,
     getCommitsBetweenBranches,
     checkout,
+    checkIsGitRepository,
   };
 });
 
