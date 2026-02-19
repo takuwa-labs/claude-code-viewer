@@ -146,7 +146,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        428
+        527
       ]
     ],
     "translation": "Message input with autocomplete support"
@@ -183,7 +183,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        221
+        222
       ]
     ],
     "translation": "Select Enter key behavior"
@@ -194,7 +194,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        332
+        336
       ]
     ],
     "translation": "Select Language"
@@ -205,7 +205,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        289
+        293
       ]
     ],
     "translation": "Select Permission Mode"
@@ -216,7 +216,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        256
+        260
       ]
     ],
     "translation": "Select Search Hotkey"
@@ -227,7 +227,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        361
+        365
       ]
     ],
     "translation": "Select Theme"
@@ -551,7 +551,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        524
+        623
       ]
     ],
     "translation": "Attach"
@@ -562,7 +562,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
-        50
+        57
       ]
     ],
     "translation": "Start Chat"
@@ -573,7 +573,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        392
+        491
       ]
     ],
     "translation": "Failed to send message. Please try again."
@@ -651,7 +651,16 @@
     "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
     "placeholders": {},
     "comments": [],
-    "origin": [],
+    "origin": [
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
+        44
+      ],
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
+        36
+      ]
+    ],
     "translation": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)"
   },
   "chat.placeholder.continue.enter": {
@@ -677,11 +686,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
-        43
+        50
       ],
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
-        35
+        42
       ]
     ],
     "translation": "Type your message... (Start with / for commands, @ for files, Shift+Enter to send)"
@@ -775,7 +784,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
-        60
+        67
       ]
     ],
     "translation": "Send"
@@ -786,11 +795,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        481
+        580
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        571
+        670
       ]
     ],
     "translation": "Send Now"
@@ -801,11 +810,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        464
+        563
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        554
+        653
       ]
     ],
     "translation": "Send Mode"
@@ -816,15 +825,15 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        484
+        583
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        574
+        673
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        591
+        690
       ]
     ],
     "translation": "Schedule Send"
@@ -835,7 +844,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        491
+        590
       ]
     ],
     "translation": "Scheduled Send Time"
@@ -858,7 +867,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        610
+        709
       ]
     ],
     "translation": "Processing..."
@@ -2935,7 +2944,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        213
+        214
       ]
     ],
     "translation": "Enter Key Behavior"
@@ -2946,7 +2955,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        231
+        232
       ]
     ],
     "translation": "Send with Command+Enter"
@@ -2954,7 +2963,12 @@
   "settings.input.enter_key_behavior.ctrl_enter": {
     "placeholders": {},
     "comments": [],
-    "origin": [],
+    "origin": [
+      [
+        "src/components/SettingsControls.tsx",
+        235
+      ]
+    ],
     "translation": "Send with Ctrl+Enter"
   },
   "settings.input.enter_key_behavior.description": {
@@ -2963,7 +2977,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        237
+        241
       ]
     ],
     "translation": "Select Enter key behavior for message input"
@@ -2974,7 +2988,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        228
+        229
       ]
     ],
     "translation": "Send with Enter"
@@ -2985,7 +2999,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        225
+        226
       ]
     ],
     "translation": "Send with Shift+Enter (Default)"
@@ -2996,7 +3010,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        248
+        252
       ]
     ],
     "translation": "Search Hotkey"
@@ -3007,7 +3021,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        263
+        267
       ]
     ],
     "translation": "Command+K"
@@ -3018,7 +3032,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        260
+        264
       ]
     ],
     "translation": "Ctrl+K"
@@ -3029,7 +3043,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        269
+        273
       ]
     ],
     "translation": "Select the hotkey to open search dialog"
@@ -3055,7 +3069,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        324
+        328
       ]
     ],
     "translation": "Language"
@@ -3066,7 +3080,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        348
+        352
       ]
     ],
     "translation": "Select your preferred language"
@@ -3077,7 +3091,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        339
+        343
       ]
     ],
     "translation": "English"
@@ -3088,7 +3102,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        336
+        340
       ]
     ],
     "translation": "Japanese"
@@ -3099,7 +3113,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        342
+        346
       ]
     ],
     "translation": "Chinese (Simplified)"
@@ -3168,7 +3182,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        280
+        284
       ]
     ],
     "translation": "Permission Mode"
@@ -3179,7 +3193,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        296
+        300
       ]
     ],
     "translation": "Accept Edits (Auto-approve file edits)"
@@ -3190,7 +3204,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        299
+        303
       ]
     ],
     "translation": "Bypass Permissions (No prompts)"
@@ -3201,7 +3215,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        293
+        297
       ]
     ],
     "translation": "Default (Confirm Permissions)"
@@ -3212,7 +3226,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        308
+        312
       ]
     ],
     "translation": "Control how file operation permission requests are handled"
@@ -3223,7 +3237,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        302
+        306
       ]
     ],
     "translation": "Plan Mode (Planning only)"
@@ -3234,7 +3248,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        313
+        317
       ]
     ],
     "translation": "This feature is not available in your Claude Code version. All tools are automatically approved."
@@ -3350,7 +3364,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        197
+        198
       ]
     ],
     "translation": "Auto-schedule Continue on Rate Limit"
@@ -3361,7 +3375,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        203
+        204
       ]
     ],
     "translation": "Automatically schedule a continue message when Claude hits rate limits"
@@ -3383,7 +3397,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        155
+        156
       ]
     ],
     "translation": "Hide Sessions Without User Messages"
@@ -3394,7 +3408,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        161
+        162
       ]
     ],
     "translation": "Show only sessions that contain user commands or messages"
@@ -3405,7 +3419,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        176
+        177
       ]
     ],
     "translation": "Unify Sessions with Same Title"
@@ -3416,7 +3430,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        182
+        183
       ]
     ],
     "translation": "When multiple sessions have the same title, show only the latest session"
@@ -3477,7 +3491,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        356
+        360
       ]
     ],
     "translation": "Theme"
@@ -3488,7 +3502,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        368
+        372
       ]
     ],
     "translation": "Dark"
@@ -3499,7 +3513,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        377
+        381
       ]
     ],
     "translation": "Select your preferred color theme"
@@ -3510,7 +3524,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        365
+        369
       ]
     ],
     "translation": "Light"
@@ -3521,7 +3535,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        371
+        375
       ]
     ],
     "translation": "System"

@@ -146,7 +146,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        428
+        527
       ]
     ],
     "translation": "補完機能付きメッセージ入力"
@@ -183,7 +183,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        221
+        222
       ]
     ],
     "translation": "Enterキーの動作を選択"
@@ -194,7 +194,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        332
+        336
       ]
     ],
     "translation": "言語を選択"
@@ -205,7 +205,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        289
+        293
       ]
     ],
     "translation": "権限モードを選択"
@@ -216,7 +216,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        256
+        260
       ]
     ],
     "translation": "検索ホットキーを選択"
@@ -227,7 +227,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        361
+        365
       ]
     ],
     "translation": "テーマを選択"
@@ -551,7 +551,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        524
+        623
       ]
     ],
     "translation": "添付"
@@ -562,7 +562,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
-        50
+        57
       ]
     ],
     "translation": "チャット開始"
@@ -573,7 +573,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        392
+        491
       ]
     ],
     "translation": "メッセージの送信に失敗しました。もう一度お試しください。"
@@ -651,7 +651,16 @@
     "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
     "placeholders": {},
     "comments": [],
-    "origin": [],
+    "origin": [
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
+        44
+      ],
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
+        36
+      ]
+    ],
     "translation": "メッセージを入力... （/でコマンド、@でファイル、Ctrl+Enterで送信）"
   },
   "chat.placeholder.continue.enter": {
@@ -677,11 +686,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
-        43
+        50
       ],
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
-        35
+        42
       ]
     ],
     "translation": "メッセージを入力... （/でコマンド、@でファイル、Shift+Enterで送信）"
@@ -775,7 +784,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
-        60
+        67
       ]
     ],
     "translation": "送信"
@@ -786,11 +795,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        481
+        580
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        571
+        670
       ]
     ],
     "translation": "今すぐ送信"
@@ -801,11 +810,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        464
+        563
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        554
+        653
       ]
     ],
     "translation": "送信モード"
@@ -816,15 +825,15 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        484
+        583
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        574
+        673
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        591
+        690
       ]
     ],
     "translation": "予約送信"
@@ -835,7 +844,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        491
+        590
       ]
     ],
     "translation": "送信予定時刻"
@@ -858,7 +867,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        610
+        709
       ]
     ],
     "translation": "処理中..."
@@ -2935,7 +2944,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        213
+        214
       ]
     ],
     "translation": "Enterキーの動作"
@@ -2946,7 +2955,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        231
+        232
       ]
     ],
     "translation": "Command+Enterで送信"
@@ -2954,7 +2963,12 @@
   "settings.input.enter_key_behavior.ctrl_enter": {
     "placeholders": {},
     "comments": [],
-    "origin": [],
+    "origin": [
+      [
+        "src/components/SettingsControls.tsx",
+        235
+      ]
+    ],
     "translation": "Ctrl+Enterで送信"
   },
   "settings.input.enter_key_behavior.description": {
@@ -2963,7 +2977,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        237
+        241
       ]
     ],
     "translation": "メッセージ入力でのEnterキーの動作を選択"
@@ -2974,7 +2988,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        228
+        229
       ]
     ],
     "translation": "Enterで送信"
@@ -2985,7 +2999,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        225
+        226
       ]
     ],
     "translation": "Shift+Enterで送信（デフォルト）"
@@ -2996,7 +3010,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        248
+        252
       ]
     ],
     "translation": "検索ホットキー"
@@ -3007,7 +3021,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        263
+        267
       ]
     ],
     "translation": "Command+K"
@@ -3018,7 +3032,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        260
+        264
       ]
     ],
     "translation": "Ctrl+K"
@@ -3029,7 +3043,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        269
+        273
       ]
     ],
     "translation": "検索ダイアログを開くホットキーを選択します"
@@ -3055,7 +3069,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        324
+        328
       ]
     ],
     "translation": "言語"
@@ -3066,7 +3080,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        348
+        352
       ]
     ],
     "translation": "お好みの言語を選択"
@@ -3077,7 +3091,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        339
+        343
       ]
     ],
     "translation": "English"
@@ -3088,7 +3102,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        336
+        340
       ]
     ],
     "translation": "日本語"
@@ -3099,7 +3113,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        342
+        346
       ]
     ],
     "translation": "中国語（簡体字）"
@@ -3168,7 +3182,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        280
+        284
       ]
     ],
     "translation": "権限モード"
@@ -3179,7 +3193,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        296
+        300
       ]
     ],
     "translation": "編集を承認（ファイル編集を自動承認）"
@@ -3190,7 +3204,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        299
+        303
       ]
     ],
     "translation": "権限をバイパス（プロンプトなし）"
@@ -3201,7 +3215,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        293
+        297
       ]
     ],
     "translation": "デフォルト（権限を確認）"
@@ -3212,7 +3226,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        308
+        312
       ]
     ],
     "translation": "ファイル操作の権限リクエストの処理方法を制御"
@@ -3223,7 +3237,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        302
+        306
       ]
     ],
     "translation": "プランモード（計画のみ）"
@@ -3234,7 +3248,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        313
+        317
       ]
     ],
     "translation": "お使いのClaude Codeバージョンではこの機能は利用できません。すべてのツールは自動で承認されます。"
@@ -3350,7 +3364,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        197
+        198
       ]
     ],
     "translation": "レート制限時に自動的に継続をスケジュール"
@@ -3361,7 +3375,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        203
+        204
       ]
     ],
     "translation": "Claude がレート制限に達した際に、自動的に継続メッセージをスケジュール実行します"
@@ -3383,7 +3397,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        155
+        156
       ]
     ],
     "translation": "ユーザーメッセージのないセッションを非表示"
@@ -3394,7 +3408,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        161
+        162
       ]
     ],
     "translation": "ユーザーコマンドまたはメッセージを含むセッションのみを表示"
@@ -3405,7 +3419,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        176
+        177
       ]
     ],
     "translation": "同じタイトルのセッションを統合"
@@ -3416,7 +3430,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        182
+        183
       ]
     ],
     "translation": "同じタイトルの複数のセッションがある場合、最新のセッションのみを表示"
@@ -3477,7 +3491,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        356
+        360
       ]
     ],
     "translation": "テーマ"
@@ -3488,7 +3502,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        368
+        372
       ]
     ],
     "translation": "ダーク"
@@ -3499,7 +3513,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        377
+        381
       ]
     ],
     "translation": "お好みのカラーテーマを選択"
@@ -3510,7 +3524,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        365
+        369
       ]
     ],
     "translation": "ライト"
@@ -3521,7 +3535,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        371
+        375
       ]
     ],
     "translation": "システム"

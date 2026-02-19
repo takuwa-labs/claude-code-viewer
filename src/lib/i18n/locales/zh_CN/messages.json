@@ -146,7 +146,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        428
+        527
       ]
     ],
     "translation": "带补全支持的消息输入"
@@ -183,7 +183,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        221
+        222
       ]
     ],
     "translation": "选择回车键行为"
@@ -194,7 +194,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        332
+        336
       ]
     ],
     "translation": "选择语言"
@@ -205,7 +205,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        289
+        293
       ]
     ],
     "translation": "选择权限模式"
@@ -216,7 +216,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        256
+        260
       ]
     ],
     "translation": "选择搜索快捷键"
@@ -227,7 +227,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        361
+        365
       ]
     ],
     "translation": "选择主题"
@@ -551,7 +551,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        524
+        623
       ]
     ],
     "translation": "附加"
@@ -562,7 +562,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
-        50
+        57
       ]
     ],
     "translation": "开始对话"
@@ -573,7 +573,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        392
+        491
       ]
     ],
     "translation": "发送消息失败。请重试。"
@@ -647,6 +647,22 @@
     ],
     "translation": "输入消息...(输入 / 使用命令,@ 使用文件,Command+Enter 发送)"
   },
+  "chat.placeholder.continue.ctrl_enter": {
+    "translation": "输入消息...(输入 / 使用命令,@ 使用文件,Ctrl+Enter 发送)",
+    "message": "Type your message... (Start with / for commands, @ for files, Ctrl+Enter to send)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
+        44
+      ],
+      [
+        "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
+        36
+      ]
+    ]
+  },
   "chat.placeholder.continue.enter": {
     "message": "Type your message... (Start with / for commands, @ for files, Enter to send)",
     "placeholders": {},
@@ -670,11 +686,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
-        43
+        50
       ],
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/StartNewChat.tsx",
-        35
+        42
       ]
     ],
     "translation": "输入消息...(输入 / 使用命令,@ 使用文件,Shift+Enter 发送)"
@@ -768,7 +784,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/sessions/[sessionId]/components/resumeChat/ContinueChat.tsx",
-        60
+        67
       ]
     ],
     "translation": "发送"
@@ -779,11 +795,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        481
+        580
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        571
+        670
       ]
     ],
     "translation": "立即发送"
@@ -794,11 +810,11 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        464
+        563
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        554
+        653
       ]
     ],
     "translation": "发送模式"
@@ -809,15 +825,15 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        484
+        583
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        574
+        673
       ],
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        591
+        690
       ]
     ],
     "translation": "定时发送"
@@ -828,7 +844,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        491
+        590
       ]
     ],
     "translation": "定时发送时间"
@@ -851,7 +867,7 @@
     "origin": [
       [
         "src/app/projects/[projectId]/components/chatForm/ChatInput.tsx",
-        610
+        709
       ]
     ],
     "translation": "处理中..."
@@ -2928,7 +2944,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        213
+        214
       ]
     ],
     "translation": "回车键行为"
@@ -2939,10 +2955,21 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        231
+        232
       ]
     ],
     "translation": "使用 Command+Enter 发送"
+  },
+  "settings.input.enter_key_behavior.ctrl_enter": {
+    "translation": "使用 Ctrl+Enter 发送",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/components/SettingsControls.tsx",
+        235
+      ]
+    ]
   },
   "settings.input.enter_key_behavior.description": {
     "placeholders": {},
@@ -2950,7 +2977,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        237
+        241
       ]
     ],
     "translation": "选择消息输入的回车键行为"
@@ -2961,7 +2988,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        228
+        229
       ]
     ],
     "translation": "使用 Enter 发送"
@@ -2972,7 +2999,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        225
+        226
       ]
     ],
     "translation": "使用 Shift+Enter 发送(默认)"
@@ -2983,7 +3010,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        248
+        252
       ]
     ],
     "translation": "搜索快捷键"
@@ -2994,7 +3021,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        263
+        267
       ]
     ],
     "translation": "Command+K"
@@ -3005,7 +3032,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        260
+        264
       ]
     ],
     "translation": "Ctrl+K"
@@ -3016,7 +3043,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        269
+        273
       ]
     ],
     "translation": "选择打开搜索对话框的快捷键"
@@ -3042,7 +3069,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        324
+        328
       ]
     ],
     "translation": "语言"
@@ -3053,7 +3080,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        348
+        352
       ]
     ],
     "translation": "选择您偏好的语言"
@@ -3064,7 +3091,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        339
+        343
       ]
     ],
     "translation": "英语"
@@ -3075,7 +3102,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        336
+        340
       ]
     ],
     "translation": "日语"
@@ -3086,7 +3113,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        342
+        346
       ]
     ],
     "translation": "简体中文"
@@ -3155,7 +3182,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        280
+        284
       ]
     ],
     "translation": "权限模式"
@@ -3166,7 +3193,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        296
+        300
       ]
     ],
     "translation": "接受编辑(自动批准文件编辑)"
@@ -3177,7 +3204,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        299
+        303
       ]
     ],
     "translation": "跳过权限(无提示)"
@@ -3188,7 +3215,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        293
+        297
       ]
     ],
     "translation": "默认(确认权限)"
@@ -3199,7 +3226,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        308
+        312
       ]
     ],
     "translation": "控制如何处理文件操作权限请求"
@@ -3210,7 +3237,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        302
+        306
       ]
     ],
     "translation": "计划模式(仅规划)"
@@ -3221,7 +3248,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        313
+        317
       ]
     ],
     "translation": "此功能在您的 Claude Code 版本中不可用。所有工具都会自动批准。"
@@ -3337,7 +3364,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        197
+        198
       ]
     ],
     "translation": "达到速率限制时自动调度继续"
@@ -3348,7 +3375,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        203
+        204
       ]
     ],
     "translation": "当 Claude 达到速率限制时,自动调度继续消息"
@@ -3370,7 +3397,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        155
+        156
       ]
     ],
     "translation": "隐藏无用户消息的会话"
@@ -3381,7 +3408,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        161
+        162
       ]
     ],
     "translation": "仅显示包含用户命令或消息的会话"
@@ -3392,7 +3419,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        176
+        177
       ]
     ],
     "translation": "合并同名会话"
@@ -3403,7 +3430,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        182
+        183
       ]
     ],
     "translation": "当多个会话标题相同时,仅显示最新的会话"
@@ -3464,7 +3491,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        356
+        360
       ]
     ],
     "translation": "主题"
@@ -3475,7 +3502,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        368
+        372
       ]
     ],
     "translation": "深色"
@@ -3486,7 +3513,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        377
+        381
       ]
     ],
     "translation": "选择您偏好的颜色主题"
@@ -3497,7 +3524,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        365
+        369
       ]
     ],
     "translation": "浅色"
@@ -3508,7 +3535,7 @@
     "origin": [
       [
         "src/components/SettingsControls.tsx",
-        371
+        375
       ]
     ],
     "translation": "跟随系统"
